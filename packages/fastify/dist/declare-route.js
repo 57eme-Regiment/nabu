@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.declareRoute = declareRoute;
 /**
  * Enregistre une route Fastify à partir d'un endpoint de contrat ts-rest.
  * Mappe automatiquement `method`, `path`, `body`, `pathParams` et `responses`.
@@ -5,7 +8,7 @@
  * @example
  * declareRoute(server, inventoryContract.getAll, ctrl.getAll.bind(ctrl));
  */
-export function declareRoute(server, contract, 
+function declareRoute(server, contract, 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 handler, options) {
     const method = contract.method.toLowerCase();

@@ -1,9 +1,12 @@
-import { z } from 'zod';
-export const HttpMethod = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpMethodSchema = exports.HttpMethod = void 0;
+const zod_1 = require("zod");
+exports.HttpMethod = {
     GET: 'GET',
     POST: 'POST',
     PUT: 'PUT',
     DELETE: 'DELETE',
     PATCH: 'PATCH',
 };
-export const HttpMethodSchema = z.enum(['GET', 'POST', 'PUT', 'DELETE', 'PATCH']);
+exports.HttpMethodSchema = zod_1.z.enum(['GET', 'POST', 'PUT', 'DELETE', 'PATCH']);

@@ -1,6 +1,9 @@
-import { ZodError } from 'zod';
-import { AppError } from './app-error.js';
-import { PRISMA_ERROR_MAP } from './prisma-error-map.js';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createErrorHandler = createErrorHandler;
+const zod_1 = require("zod");
+const app_error_1 = require("./app-error");
+const prisma_error_map_1 = require("./prisma-error-map");
 /** Duck-type check for Prisma's PrismaClientKnownRequestError — avoids importing generated client. */
 function isPrismaKnownError(e) {
     return (e != null &&
@@ -17,17 +20,17 @@ function isPrismaKnownError(e) {
  * @example
  * app.setErrorHandler(createErrorHandler(logger));
  */
-export function createErrorHandler(logger) {
+function createErrorHandler(logger) {
     return function errorHandler(error, req, reply) {
         logger.error(`${req.id} ${req.method} ${req.url}`, error);
-        if (error instanceof AppError) {
+        if (error instanceof app_error_1.AppError) {
             return reply.status(error.statusCode).send({
                 error: error.code ?? error.name,
                 message: error.message,
             });
         }
         if (isPrismaKnownError(error)) {
-            const mapped = PRISMA_ERROR_MAP[error.code];
+            const mapped = prisma_error_map_1.PRISMA_ERROR_MAP[error.code];
             if (mapped) {
                 return reply
                     .status(mapped.status)
@@ -38,7 +41,7 @@ export function createErrorHandler(logger) {
                 .status(500)
                 .send({ error: 'DATABASE_ERROR', message: 'Unexpected database error.' });
         }
-        if (error instanceof ZodError) {
+        if (error instanceof zod_1.ZodError) {
             return reply.status(422).send({
                 error: 'VALIDATION_ERROR',
                 message: error.issues

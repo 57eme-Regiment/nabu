@@ -1,4 +1,7 @@
-export class AppError extends Error {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppError = void 0;
+class AppError extends Error {
     statusCode;
     code;
     constructor(message, statusCode = 400, code) {
@@ -8,3 +11,4 @@ export class AppError extends Error {
         this.name = 'AppError';
     }
 }
+exports.AppError = AppError;

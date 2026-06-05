@@ -1,7 +1,7 @@
 import type { FastifyReply, FastifyRequest } from 'fastify';
 import { ZodError } from 'zod';
-import { AppError } from './app-error.js';
-import { PRISMA_ERROR_MAP } from './prisma-error-map.js';
+import { AppError } from './app-error';
+import { PRISMA_ERROR_MAP } from './prisma-error-map';
 
 type SimpleLogger = { error: (...args: unknown[]) => void };
 

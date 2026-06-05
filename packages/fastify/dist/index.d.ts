@@ -1,3 +1,3 @@
-export { declareRoute, type ContractEndpoint } from './declare-route.js';
-export { HttpMethod, HttpMethodSchema, type HttpMethod as HttpMethodType } from './http-method.js';
+export { declareRoute, type ContractEndpoint } from './declare-route';
+export { HttpMethod, HttpMethodSchema, type HttpMethod as HttpMethodType } from './http-method';
 //# sourceMappingURL=index.d.ts.map

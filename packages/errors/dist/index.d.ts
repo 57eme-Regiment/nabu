@@ -1,4 +1,4 @@
-export { AppError } from './app-error.js';
-export { createErrorHandler } from './error-handler.js';
-export { PRISMA_ERROR_MAP } from './prisma-error-map.js';
+export { AppError } from './app-error';
+export { createErrorHandler } from './error-handler';
+export { PRISMA_ERROR_MAP } from './prisma-error-map';
 //# sourceMappingURL=index.d.ts.map

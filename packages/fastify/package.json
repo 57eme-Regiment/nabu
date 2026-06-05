@@ -1,12 +1,12 @@
 {
   "name": "@57eme-regiment/nabu-fastify",
   "version": "0.1.0",
-  "description": "declareRoute utility — ts-rest contract to Fastify route bridge",
+  "description": "declareRoute utility \u2014 ts-rest contract to Fastify route bridge",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     }
   },

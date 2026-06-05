@@ -1,7 +1,7 @@
 import type { ZodTypeProvider } from '@fastify/type-provider-zod';
 import type { FastifyInstance, FastifyReply, FastifyRequest, RouteShorthandOptions } from 'fastify';
 import type { ZodType } from 'zod';
-import type { HttpMethod } from './http-method.js';
+import type { HttpMethod } from './http-method';
 export type ContractEndpoint = {
     method: HttpMethod;
     path: string;

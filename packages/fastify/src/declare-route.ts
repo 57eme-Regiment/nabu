@@ -6,7 +6,7 @@ import type {
   RouteShorthandOptions,
 } from 'fastify';
 import type { ZodType } from 'zod';
-import type { HttpMethod } from './http-method.js';
+import type { HttpMethod } from './http-method';
 
 export type ContractEndpoint = {
   method: HttpMethod;
