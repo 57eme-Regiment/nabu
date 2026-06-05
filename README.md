@@ -215,7 +215,71 @@ import { cn, HttpError, getQueryClient, formatDateTime } from '@57eme-regiment/n
 
 ---
 
-## Ajouter un composant ou utilitaire
+## Ajouter un composant UI
+
+### Composant partagé — dans Nabu
+
+À utiliser quand le composant sera consommé par plusieurs frontends (Hermes, Foxwatcher…).
+
+```bash
+# 1. Se placer dans le package ui
+cd nabu/packages/ui
+
+# 2. Générer le composant avec shadcn (cible le bon dossier)
+npx shadcn add tooltip --path src/components
+
+# 3. Corriger l'import interne généré par shadcn
+#    @/lib/utils  →  ../utils
+#    @/components/ui/X  →  ./X
+
+# 4. Exporter depuis src/index.ts
+echo "export * from './components/tooltip.js';" >> src/index.ts
+
+# 5. Rebuilder et committer
+pnpm build
+git add -A && git commit -m "feat(ui): add Tooltip component"
+git push
+```
+
+Mettre à jour le pointeur dans chaque repo consommateur :
+```bash
+git submodule update --remote nabu
+git add nabu && git commit -m "chore: update nabu"
+```
+
+Utilisation dans les projets :
+```tsx
+import { Tooltip, TooltipContent, TooltipTrigger } from '@57eme-regiment/nabu-ui';
+```
+
+---
+
+### Composant local — dans le projet consommateur
+
+À utiliser quand le composant est spécifique à un seul projet et n'a pas vocation à être partagé.
+
+```bash
+# Générer dans le projet (ex. Hermes)
+npx shadcn add tooltip
+# → crée src/components/ui/tooltip.tsx
+
+# Déplacer hors du dossier ui/ (qui ne doit contenir que les re-exports nabu)
+mv src/components/ui/tooltip.tsx src/components/tooltip.tsx
+
+# Corriger l'import cn dans le fichier déplacé :
+# @/lib/utils  →  @57eme-regiment/nabu-frontend-utils
+```
+
+Utilisation :
+```tsx
+import { Tooltip } from '@/components/tooltip';
+```
+
+> **Règle :** si le composant sera réutilisé dans d'autres frontends → Nabu. Sinon → local dans le projet.
+
+---
+
+## Ajouter un utilitaire backend ou frontend
 
 1. Écrire le code dans le package approprié (`packages/ui/src/`, `packages/errors/src/`, etc.)
 2. L'exporter dans le `src/index.ts` du package
