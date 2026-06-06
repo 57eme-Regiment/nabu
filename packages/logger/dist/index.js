@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.createLogger = createLogger;
-const tslog_1 = require("tslog");
+import { Logger } from 'tslog';
 /**
  * Crée un logger tslog préconfiguré pour un service donné.
  * Format JSON en production, pretty-print coloré en développement.
@@ -9,8 +6,8 @@ const tslog_1 = require("tslog");
  * @example
  * export const logger = createLogger('Renenutet');
  */
-function createLogger(name, nodeEnv = process.env.NODE_ENV) {
-    return new tslog_1.Logger({
+export function createLogger(name, nodeEnv = process.env.NODE_ENV) {
+    return new Logger({
         name,
         type: nodeEnv === 'production' ? 'json' : 'pretty',
         minLevel: nodeEnv === 'production' ? 3 : 0,

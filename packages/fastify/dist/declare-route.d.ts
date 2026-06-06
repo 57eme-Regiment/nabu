@@ -14,6 +14,7 @@ export type ContractEndpoint = {
         tags?: string[];
     };
 };
+type AnyContractEndpoint = ContractEndpoint | (Record<string, any> & Pick<ContractEndpoint, 'method'>);
 type ZodServer = FastifyInstance<any, any, any, any, ZodTypeProvider>;
 /**
  * Enregistre une route Fastify à partir d'un endpoint de contrat ts-rest.
@@ -22,6 +23,6 @@ type ZodServer = FastifyInstance<any, any, any, any, ZodTypeProvider>;
  * @example
  * declareRoute(server, inventoryContract.getAll, ctrl.getAll.bind(ctrl));
  */
-export declare function declareRoute(server: ZodServer, contract: ContractEndpoint, handler: (req: FastifyRequest<any>, reply: FastifyReply) => void | Promise<any>, options?: Omit<RouteShorthandOptions, 'schema'>): void;
+export declare function declareRoute(server: ZodServer, contract: AnyContractEndpoint, handler: (req: FastifyRequest<any>, reply: FastifyReply) => void | Promise<any>, options?: Omit<RouteShorthandOptions, 'schema'>): void;
 export {};
 //# sourceMappingURL=declare-route.d.ts.map
