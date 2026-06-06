@@ -154,28 +154,6 @@ Les contrats doivent définir des **chemins absolus** (ex. `/admin/roles`). Ne p
 
 ## Frontend — `nabu-ui` et Tailwind CSS
 
-`nabu-ui` est compilé en JS, mais Tailwind a besoin de scanner les **sources TypeScript** pour inclure les classes dans le bundle CSS.
-
-### Tailwind v4 (`@tailwindcss/vite`)
-
-Dans le fichier CSS principal du projet consommateur (ex. `src/globals.css`) :
-
-```css
-@import "tailwindcss";
-@source "../../nabu/packages/ui/src";   /* ← ajouter */
-```
-
-### Tailwind v3 (`tailwind.config.ts`)
-
-```ts
-export default {
-  content: [
-    './src/**/*.{ts,tsx}',
-    './nabu/packages/ui/src/**/*.{ts,tsx}',
-  ],
-}
-```
-
 ### Variables CSS
 
 `nabu-ui` utilise les variables CSS standard (`--primary`, `--background`, `--card`, `--border`, `--radius`, etc.). Ces variables doivent être définies dans le `globals.css` du projet consommateur — les projets existants les ont déjà.

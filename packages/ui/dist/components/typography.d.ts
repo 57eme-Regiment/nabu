@@ -3,7 +3,7 @@ import type { ComponentPropsWithRef, ElementType } from 'react';
 import React from 'react';
 type DistributiveOmit<T, TOmitted extends PropertyKey> = T extends any ? Omit<T, TOmitted> : never;
 export declare const typographyVariants: (props?: ({
-    variant?: "h1" | "h2" | "h3" | "p" | "default" | "quote" | "code" | "lead" | "large" | "small" | "smallBold" | "muted" | "italic" | "link" | null | undefined;
+    variant?: "default" | "link" | "code" | "h1" | "h2" | "h3" | "p" | "small" | "quote" | "lead" | "large" | "smallBold" | "muted" | "italic" | null | undefined;
 } & import("class-variance-authority/types").ClassProp) | undefined) => string;
 type TypographyCvaProps = VariantProps<typeof typographyVariants>;
 declare const defaultElementMapping: {
