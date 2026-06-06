@@ -8,8 +8,8 @@ export * from './components/checkbox.js';
 export * from './components/dialog.js';
 export * from './components/dropdown-menu.js';
 export * from './components/field.js';
-export * from './components/input.js';
 export * from './components/input-group.js';
+export * from './components/input.js';
 export * from './components/label.js';
 export * from './components/progress.js';
 export * from './components/select.js';
@@ -19,12 +19,13 @@ export * from './components/switch.js';
 export * from './components/table.js';
 export * from './components/tabs.js';
 export * from './components/textarea.js';
+export * from './components/typography.js';
 
 // Providers & toggles
-export { ThemeProvider, useTheme } from './theme-provider.js';
-export { ThemeToggle } from './theme-toggle.js';
 export { LanguageProvider, useLanguage } from './language-provider.js';
 export { LanguageToggle } from './language-toggle.js';
+export { ThemeProvider, useTheme } from './theme-provider.js';
+export { ThemeToggle } from './theme-toggle.js';
 
 // Utility (re-exported for convenience)
 export { cn } from './utils.js';

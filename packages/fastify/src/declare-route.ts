@@ -19,6 +19,11 @@ export type ContractEndpoint = {
   metadata?: { tags?: string[] };
 };
 
+// ts-rest 3.x + Zod v4 : l'inférence de type perd path/responses comme propriétés
+// explicites. Ce type accepte les deux formes.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type AnyContractEndpoint = ContractEndpoint | (Record<string, any> & Pick<ContractEndpoint, 'method'>);
+
 type ZodServer = FastifyInstance<any, any, any, any, ZodTypeProvider>;
 
 /**
@@ -30,7 +35,7 @@ type ZodServer = FastifyInstance<any, any, any, any, ZodTypeProvider>;
  */
 export function declareRoute(
   server: ZodServer,
-  contract: ContractEndpoint,
+  contract: AnyContractEndpoint,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   handler: (req: FastifyRequest<any>, reply: FastifyReply) => void | Promise<any>,
   options?: Omit<RouteShorthandOptions, 'schema'>,
