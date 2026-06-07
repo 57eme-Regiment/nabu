@@ -2,6 +2,7 @@
 export * from './components/alert-dialog.js';
 export * from './components/avatar.js';
 export * from './components/badge.js';
+export * from './components/button-group.js';
 export * from './components/button.js';
 export * from './components/card.js';
 export * from './components/checkbox.js';
@@ -9,6 +10,7 @@ export * from './components/dialog.js';
 export * from './components/dropdown-menu.js';
 export * from './components/field.js';
 export * from './components/input-group.js';
+export * from './components/input-otp.js';
 export * from './components/input.js';
 export * from './components/label.js';
 export * from './components/progress.js';

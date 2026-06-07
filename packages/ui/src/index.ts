@@ -10,6 +10,7 @@ export * from './components/dialog.js';
 export * from './components/dropdown-menu.js';
 export * from './components/field.js';
 export * from './components/input-group.js';
+export * from './components/input-otp.js';
 export * from './components/input.js';
 export * from './components/label.js';
 export * from './components/progress.js';
