@@ -15,12 +15,18 @@
     "dev": "tsc --project tsconfig.json --watch"
   },
   "peerDependencies": {
+    "@tanstack/react-query": ">=5",
+    "react": ">=18"
+  },
+  "dependencies": {
+    "@57eme-regiment/auth-contracts": "link:../../../../wan-shi-tong/packages/auth-contracts",
+    "@57eme-regiment/nabu-frontend-utils": "link:../frontend-utils",
     "@base-ui/react": ">=1.0.0-alpha",
     "@tabler/icons-react": ">=3",
     "class-variance-authority": ">=0.7",
     "clsx": ">=2",
+    "input-otp": ">=1",
     "lucide-react": ">=0.400",
-    "react": ">=18",
     "sonner": ">=1",
     "tailwind-merge": ">=2"
   },

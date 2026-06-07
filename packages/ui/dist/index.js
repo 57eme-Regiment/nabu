@@ -1,27 +1,29 @@
-// Components
-export * from './components/alert-dialog.js';
-export * from './components/avatar.js';
-export * from './components/badge.js';
-export * from './components/button-group.js';
-export * from './components/button.js';
-export * from './components/card.js';
-export * from './components/checkbox.js';
-export * from './components/dialog.js';
-export * from './components/dropdown-menu.js';
-export * from './components/field.js';
-export * from './components/input-group.js';
-export * from './components/input-otp.js';
-export * from './components/input.js';
-export * from './components/label.js';
-export * from './components/progress.js';
-export * from './components/select.js';
-export * from './components/separator.js';
-export * from './components/sonner.js';
-export * from './components/switch.js';
-export * from './components/table.js';
-export * from './components/tabs.js';
-export * from './components/textarea.js';
-export * from './components/typography.js';
+// Custom components
+export * from './components/UserAutocompleteSelect';
+// Ui components (shad cn)
+export * from './ui/alert-dialog.js';
+export * from './ui/avatar.js';
+export * from './ui/badge.js';
+export * from './ui/button-group.js';
+export * from './ui/button.js';
+export * from './ui/card.js';
+export * from './ui/checkbox.js';
+export * from './ui/dialog.js';
+export * from './ui/dropdown-menu.js';
+export * from './ui/field.js';
+export * from './ui/input-group.js';
+export * from './ui/input-otp.js';
+export * from './ui/input.js';
+export * from './ui/label.js';
+export * from './ui/progress.js';
+export * from './ui/select.js';
+export * from './ui/separator.js';
+export * from './ui/sonner.js';
+export * from './ui/switch.js';
+export * from './ui/table.js';
+export * from './ui/tabs.js';
+export * from './ui/textarea.js';
+export * from './ui/typography.js';
 // Providers & toggles
 export { LanguageProvider, useLanguage } from './language-provider.js';
 export { LanguageToggle } from './language-toggle.js';

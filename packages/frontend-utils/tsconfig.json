@@ -10,7 +10,8 @@
     "declarationMap": true,
     "composite": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "jsx": "react-jsx"
   },
   "include": ["src/**/*"]
 }

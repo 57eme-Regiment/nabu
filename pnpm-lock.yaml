@@ -42,11 +42,17 @@ importers:
 
   packages/frontend-utils:
     dependencies:
+      '@57eme-regiment/auth-contracts':
+        specifier: link:../../../../wan-shi-tong/packages/auth-contracts
+        version: link:../../../../wan-shi-tong/packages/auth-contracts
+      '@base-ui/react':
+        specifier: '>=1.0.0-alpha'
+        version: 1.5.0(@types/react@19.2.16)(date-fns@4.4.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@tanstack/react-query':
         specifier: '>=5'
         version: 5.101.0(react@19.2.7)
       ag-grid-community:
-        specifier: ^35.3.1
+        specifier: '>=35'
         version: 35.3.1
       clsx:
         specifier: '>=2'
@@ -54,10 +60,19 @@ importers:
       date-fns:
         specifier: '>=3'
         version: 4.4.0
+      lucide-react:
+        specifier: '>=0.400'
+        version: 1.17.0(react@19.2.7)
+      react:
+        specifier: '>=18'
+        version: 19.2.7
       tailwind-merge:
         specifier: '>=2'
         version: 3.6.0
     devDependencies:
+      '@ts-rest/core':
+        specifier: 3.53.0-rc.1
+        version: 3.53.0-rc.1(@types/node@22.19.19)
       typescript:
         specifier: ^5.6.0
         version: 5.9.3
@@ -77,12 +92,21 @@ importers:
 
   packages/ui:
     dependencies:
+      '@57eme-regiment/auth-contracts':
+        specifier: link:../../../../wan-shi-tong/packages/auth-contracts
+        version: link:../../../../wan-shi-tong/packages/auth-contracts
+      '@57eme-regiment/nabu-frontend-utils':
+        specifier: link:../frontend-utils
+        version: link:../frontend-utils
       '@base-ui/react':
         specifier: '>=1.0.0-alpha'
         version: 1.5.0(@types/react@19.2.16)(date-fns@4.4.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@tabler/icons-react':
         specifier: '>=3'
         version: 3.44.0(react@19.2.7)
+      '@tanstack/react-query':
+        specifier: '>=5'
+        version: 5.101.0(react@19.2.7)
       class-variance-authority:
         specifier: '>=0.7'
         version: 0.7.1
@@ -219,6 +243,14 @@ packages:
     resolution: {integrity: sha512-rLlJXSpkqfizLWgkR5+eLeIk0MvTx/meEIR7LRjxic+qxiQP8zVjq7BqQkiCMNLQBlLfuOLqqr6KO5GtrDlmSg==}
     peerDependencies:
       react: ^18 || ^19
+
+  '@ts-rest/core@3.53.0-rc.1':
+    resolution: {integrity: sha512-hDMXqKHSys6w+kXFW1Q6EvN8QgRvtXKXJ2TpYByKI4TquaPjiTOv99aLD26X4LNRzdna8Ci1PVyzr0jYZv0oNQ==}
+    peerDependencies:
+      '@types/node': ^18.18.7 || >=20.8.4
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
 
   '@types/node@22.19.19':
     resolution: {integrity: sha512-dyh/xO2Fh5bYrfWaaqGrRQQGkNdmYw6AmaAUvYeUMNTWQtvb796ikLdmTchRmOlOiIJ1TDXfWgVx1QkUlQ6Hew==}
@@ -576,6 +608,10 @@ snapshots:
     dependencies:
       '@tanstack/query-core': 5.101.0
       react: 19.2.7
+
+  '@ts-rest/core@3.53.0-rc.1(@types/node@22.19.19)':
+    optionalDependencies:
+      '@types/node': 22.19.19
 
   '@types/node@22.19.19':
     dependencies:
