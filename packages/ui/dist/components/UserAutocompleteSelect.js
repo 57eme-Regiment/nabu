@@ -1,5 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { HttpError, useDebounce, wanAdminUserApi, wanApi, } from '@57eme-regiment/nabu-frontend-utils';
+import { cn, HttpError, useDebounce, wanAdminUserApi, wanApi, } from '@57eme-regiment/nabu-frontend-utils';
 import { Avatar } from '@base-ui/react/avatar';
 import { Combobox } from '@base-ui/react/combobox';
 import { useQuery } from '@tanstack/react-query';
@@ -36,7 +36,6 @@ function useUserByIdQuery(id) {
     });
 }
 const userLabel = (user) => user.name;
-const cn = (...classes) => classes.filter(Boolean).join(' ');
 export const UserAutocompleteSelect = ({ value, defaultValue, onSelected, disabled = false, readOnly = false, excludeUserIds = [], placeholder = 'Search user…', }) => {
     const [inputValue, setInputValue] = useState('');
     const [userPickedItem, setUserPickedItem] = useState(null);

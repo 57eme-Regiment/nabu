@@ -1,4 +1,6 @@
 // Custom components
+export * from './components/aggrid/TextFloatingFilter';
+export * from './components/aggrid/FilterHeader';
 export * from './components/UserAutocompleteSelect';
 
 // Ui components (shad cn)
