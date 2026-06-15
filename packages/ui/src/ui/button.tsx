@@ -1,6 +1,11 @@
 import { Button as ButtonPrimitive } from '@base-ui/react/button';
 import { cva, type VariantProps } from 'class-variance-authority';
+import { Loader2 } from 'lucide-react';
 import { cn } from '../utils.js';
+
+type ButtonProps = {
+  loading?: boolean;
+};
 
 const buttonVariants = cva(
   "group/button cursor-pointer inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
@@ -47,15 +52,29 @@ function Button({
   className,
   variant = 'default',
   size = 'default',
+  loading = false,
+  disabled,
+  children,
   ...props
-}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
+}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants> & ButtonProps) {
   return (
     <ButtonPrimitive
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
-      {...props}
-    />
+      data-loading={loading || undefined}
+      aria-busy={loading || undefined}
+      disabled={disabled ?? loading}
+      className={cn(buttonVariants({ variant, size, className }), 'relative')}
+      {...props}>
+      <span className={cn('flex items-center gap-1', loading && 'invisible')}>
+        {children}
+      </span>
+      {loading && (
+        <span className="absolute inset-0 flex items-center justify-center">
+          <Loader2 className="animate-spin" />
+        </span>
+      )}
+    </ButtonPrimitive>
   );
 }
 
-export { Button, buttonVariants };
+export { Button, ButtonProps, buttonVariants };
