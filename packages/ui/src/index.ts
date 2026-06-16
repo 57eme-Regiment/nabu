@@ -1,5 +1,5 @@
 // Custom components
-export * from './components/aggrid/TextFloatingFilter';
+export * from './components/aggrid/defaults';
 export * from './components/aggrid/FilterHeader';
 export * from './components/UserAutocompleteSelect';
 
@@ -29,7 +29,6 @@ export * from './ui/textarea.js';
 export * from './ui/typography.js';
 
 // Providers & toggles
-export { LanguageProvider, useLanguage } from './language-provider.js';
 export { LanguageToggle } from './language-toggle.js';
 export { ThemeProvider, useTheme } from './theme-provider.js';
 export { ThemeToggle } from './theme-toggle.js';

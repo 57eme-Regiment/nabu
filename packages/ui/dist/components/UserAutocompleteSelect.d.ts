@@ -8,6 +8,6 @@ type UserAutocompleteSelectProps = {
     excludeUserIds?: string[];
     placeholder?: string;
 };
-export declare const UserAutocompleteSelect: ({ value, defaultValue, onSelected, disabled, readOnly, excludeUserIds, placeholder, }: UserAutocompleteSelectProps) => import("react").JSX.Element;
+export declare const UserAutocompleteSelect: ({ value, defaultValue, onSelected, disabled, readOnly, excludeUserIds, placeholder, }: UserAutocompleteSelectProps) => import("react/jsx-runtime").JSX.Element;
 export {};
 //# sourceMappingURL=UserAutocompleteSelect.d.ts.map

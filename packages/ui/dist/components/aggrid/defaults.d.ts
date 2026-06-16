@@ -30,4 +30,4 @@ export declare const defautGridOption: {
     suppressMovableColumns: true;
     headerHeight: number;
 };
-//# sourceMappingURL=aggrid.d.ts.map
+//# sourceMappingURL=defaults.d.ts.map

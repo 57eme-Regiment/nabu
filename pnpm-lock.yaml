@@ -47,13 +47,10 @@ importers:
         version: link:../../../../wan-shi-tong/packages/auth-contracts
       '@base-ui/react':
         specifier: '>=1.0.0-alpha'
-        version: 1.5.0(@types/react@19.2.16)(date-fns@4.4.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        version: 1.5.0(@types/react@19.2.17)(date-fns@4.4.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@tanstack/react-query':
         specifier: '>=5'
         version: 5.101.0(react@19.2.7)
-      ag-grid-community:
-        specifier: '>=35'
-        version: 35.3.1
       clsx:
         specifier: '>=2'
         version: 2.1.1
@@ -62,7 +59,7 @@ importers:
         version: 4.4.0
       lucide-react:
         specifier: '>=0.400'
-        version: 1.17.0(react@19.2.7)
+        version: 1.20.0(react@19.2.7)
       react:
         specifier: '>=18'
         version: 19.2.7
@@ -72,7 +69,7 @@ importers:
     devDependencies:
       '@ts-rest/core':
         specifier: 3.53.0-rc.1
-        version: 3.53.0-rc.1(@types/node@22.19.19)
+        version: 3.53.0-rc.1(@types/node@22.19.21)
       typescript:
         specifier: ^5.6.0
         version: 5.9.3
@@ -85,7 +82,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^22.0.0
-        version: 22.19.19
+        version: 22.19.21
       typescript:
         specifier: ^5.6.0
         version: 5.9.3
@@ -93,20 +90,20 @@ importers:
   packages/ui:
     dependencies:
       '@57eme-regiment/auth-contracts':
-        specifier: link:../../../../wan-shi-tong/packages/auth-contracts
-        version: link:../../../../wan-shi-tong/packages/auth-contracts
-      '@57eme-regiment/nabu-frontend-utils':
-        specifier: link:../frontend-utils
-        version: link:../frontend-utils
+        specifier: ^1.11.0
+        version: 1.11.0(@ts-rest/core@3.53.0-rc.1(@types/node@22.19.21))(zod@4.4.3)
       '@base-ui/react':
         specifier: '>=1.0.0-alpha'
-        version: 1.5.0(@types/react@19.2.16)(date-fns@4.4.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        version: 1.5.0(@types/react@19.2.17)(date-fns@4.4.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@tabler/icons-react':
         specifier: '>=3'
         version: 3.44.0(react@19.2.7)
       '@tanstack/react-query':
         specifier: '>=5'
         version: 5.101.0(react@19.2.7)
+      ag-grid-community:
+        specifier: '>=35'
+        version: 35.3.1
       class-variance-authority:
         specifier: '>=0.7'
         version: 0.7.1
@@ -118,7 +115,7 @@ importers:
         version: 1.4.2(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       lucide-react:
         specifier: '>=0.400'
-        version: 1.17.0(react@19.2.7)
+        version: 1.20.0(react@19.2.7)
       react:
         specifier: '>=18'
         version: 19.2.7
@@ -131,12 +128,18 @@ importers:
     devDependencies:
       '@types/react':
         specifier: ^19.0.0
-        version: 19.2.16
+        version: 19.2.17
       typescript:
         specifier: ^5.6.0
         version: 5.9.3
 
 packages:
+
+  '@57eme-regiment/auth-contracts@1.11.0':
+    resolution: {integrity: sha512-iYtAYpjjdMmsdxvFT8WOhV9W8MqEB/GT7HVjgxEOVj7KJLfhTVGUCOmHFqhQcxYR/NJOOoJihFCD3r8I5UcbsA==, tarball: https://npm.pkg.github.com/download/@57eme-regiment/auth-contracts/1.11.0/f7cbc4aed3128a421ffc3d1222dbca75ce254be8}
+    peerDependencies:
+      '@ts-rest/core': '>=3.50.0'
+      zod: '>=3'
 
   '@babel/runtime@7.29.7':
     resolution: {integrity: sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==}
@@ -255,11 +258,11 @@ packages:
       '@types/node':
         optional: true
 
-  '@types/node@22.19.19':
-    resolution: {integrity: sha512-dyh/xO2Fh5bYrfWaaqGrRQQGkNdmYw6AmaAUvYeUMNTWQtvb796ikLdmTchRmOlOiIJ1TDXfWgVx1QkUlQ6Hew==}
+  '@types/node@22.19.21':
+    resolution: {integrity: sha512-VMeFBSCKQKmm2swI2kW51SFusDqekC6q9trBCvJ/JliDchFSuoYYKN7yVNjPthP1HKZcx3U1gI/wTcEBjEFKTA==}
 
-  '@types/react@19.2.16':
-    resolution: {integrity: sha512-esJiCAnl0kfpNdE69f3So4WJUXy95dLZydX0KwK46riIHDzHM7O9Vtf9xCHW0PXIqvgqNrswl522kA/5yx+F4w==}
+  '@types/react@19.2.17':
+    resolution: {integrity: sha512-MXfmqaVPEVgkBT/aY0aGCkRWWtByiYQXo3xdQ8r5RzuFrPiRn8Gar2tQdXSUQ2GKV3bkXckek89V8wQBY2Q/Aw==}
 
   abstract-logging@2.0.1:
     resolution: {integrity: sha512-2BjRTZxTPvheOvGbBslFSYOUkr+SjPtOnrLP33f+VIWLzezQpZcqVg7ja3L4dBXmzzgwT+a029jRx5PCi3JuiA==}
@@ -369,8 +372,8 @@ packages:
   light-my-request@6.6.0:
     resolution: {integrity: sha512-CHYbu8RtboSIoVsHZ6Ye4cj4Aw/yg2oAFimlF7mNvfDV192LR7nDiKtSIfCuLT7KokPSTn/9kfVLm5OGN0A28A==}
 
-  lucide-react@1.17.0:
-    resolution: {integrity: sha512-9FA9evdox/JQL5PT57fdA1x/yg8T7knJ98+zjTL3UfKza6pflQUUh3XtaQIHKvnsJw1lmsEyHVlt5jchYxOQ5w==}
+  lucide-react@1.20.0:
+    resolution: {integrity: sha512-jhXLeC/7m0/tjL1nzMdKk6x256zWA6AtbhTVreHOiKPoeX2d6MK4FbyIQPpVq0E6iPWBisyy1TW+pEge/uMEuQ==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -451,8 +454,8 @@ packages:
   secure-json-parse@4.1.0:
     resolution: {integrity: sha512-l4KnYfEyqYJxDwlNVyRfO2E4NTHfMKAWdUuA8J0yve2Dz/E/PdBepY03RvyJpssIpRFwJoCD55wA+mEDs6ByWA==}
 
-  semver@7.8.2:
-    resolution: {integrity: sha512-c8jsqUZm3omBOI66G90z1Dyw5z622G8oLG+omfsHBJf3CWQTlOcwOjvOG6wtiNfW6anKm/eA39LMwMtMez2TiQ==}
+  semver@7.8.4:
+    resolution: {integrity: sha512-rUCObTnP32Q08R2uuIrt7r9PlEonuTmtuXYcW6s5kjdlj3xbnwe+21yXptAUYcMAABLkYYTtnmzb3w3EDZfueA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -510,22 +513,27 @@ packages:
 
 snapshots:
 
+  '@57eme-regiment/auth-contracts@1.11.0(@ts-rest/core@3.53.0-rc.1(@types/node@22.19.21))(zod@4.4.3)':
+    dependencies:
+      '@ts-rest/core': 3.53.0-rc.1(@types/node@22.19.21)
+      zod: 4.4.3
+
   '@babel/runtime@7.29.7': {}
 
-  '@base-ui/react@1.5.0(@types/react@19.2.16)(date-fns@4.4.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@base-ui/react@1.5.0(@types/react@19.2.17)(date-fns@4.4.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
       '@babel/runtime': 7.29.7
-      '@base-ui/utils': 0.2.9(@types/react@19.2.16)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@base-ui/utils': 0.2.9(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@floating-ui/react-dom': 2.1.8(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@floating-ui/utils': 0.2.11
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
       use-sync-external-store: 1.6.0(react@19.2.7)
     optionalDependencies:
-      '@types/react': 19.2.16
+      '@types/react': 19.2.17
       date-fns: 4.4.0
 
-  '@base-ui/utils@0.2.9(@types/react@19.2.16)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@base-ui/utils@0.2.9(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
       '@babel/runtime': 7.29.7
       '@floating-ui/utils': 0.2.11
@@ -534,7 +542,7 @@ snapshots:
       reselect: 5.2.0
       use-sync-external-store: 1.6.0(react@19.2.7)
     optionalDependencies:
-      '@types/react': 19.2.16
+      '@types/react': 19.2.17
 
   '@fastify/ajv-compiler@4.0.5':
     dependencies:
@@ -618,15 +626,15 @@ snapshots:
       '@tanstack/query-core': 5.101.0
       react: 19.2.7
 
-  '@ts-rest/core@3.53.0-rc.1(@types/node@22.19.19)':
+  '@ts-rest/core@3.53.0-rc.1(@types/node@22.19.21)':
     optionalDependencies:
-      '@types/node': 22.19.19
+      '@types/node': 22.19.21
 
-  '@types/node@22.19.19':
+  '@types/node@22.19.21':
     dependencies:
       undici-types: 6.21.0
 
-  '@types/react@19.2.16':
+  '@types/react@19.2.17':
     dependencies:
       csstype: 3.2.3
 
@@ -710,7 +718,7 @@ snapshots:
       process-warning: 5.0.0
       rfdc: 1.4.1
       secure-json-parse: 4.1.0
-      semver: 7.8.2
+      semver: 7.8.4
       toad-cache: 3.7.1
 
   fastq@1.20.1:
@@ -750,7 +758,7 @@ snapshots:
       process-warning: 4.0.1
       set-cookie-parser: 2.7.2
 
-  lucide-react@1.17.0(react@19.2.7):
+  lucide-react@1.20.0(react@19.2.7):
     dependencies:
       react: 19.2.7
 
@@ -817,7 +825,7 @@ snapshots:
 
   secure-json-parse@4.1.0: {}
 
-  semver@7.8.2: {}
+  semver@7.8.4: {}
 
   set-cookie-parser@2.7.2: {}
 

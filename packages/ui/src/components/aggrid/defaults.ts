@@ -1,5 +1,5 @@
-import { FilterHeader } from '@57eme-regiment/nabu-ui';
-import { ColDef, GridOptions } from 'ag-grid-community';
+import type { ColDef, GridOptions } from 'ag-grid-community';
+import { FilterHeader } from './FilterHeader';
 
 export const defaultColDef = {
   sortable: true,

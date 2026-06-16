@@ -1,4 +1,4 @@
-import { FilterHeader } from '@57eme-regiment/nabu-ui';
+import { FilterHeader } from './FilterHeader';
 export const defaultColDef = {
     sortable: true,
     resizable: false,

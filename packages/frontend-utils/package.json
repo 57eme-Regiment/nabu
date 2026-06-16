@@ -15,10 +15,10 @@
     "dev": "tsc --project tsconfig.json --watch"
   },
   "peerDependencies": {
+    "@57eme-regiment/auth-contracts": ">=1",
     "@base-ui/react": ">=1.0.0-alpha",
     "@tanstack/react-query": ">=5",
     "@ts-rest/core": ">=3.50.0",
-    "ag-grid-community": ">=35",
     "clsx": ">=2",
     "date-fns": ">=3",
     "lucide-react": ">=0.400",
@@ -27,9 +27,6 @@
   },
   "devDependencies": {
     "@ts-rest/core": "3.53.0-rc.1",
-    "typescript": "^5.6.0"
-  },
-  "dependencies": {
-    "@57eme-regiment/auth-contracts": "link:../../../../wan-shi-tong/packages/auth-contracts"
+    "typescript": "^6.0.0"
   }
 }

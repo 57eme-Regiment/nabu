@@ -1,4 +1,4 @@
-export * from './components/aggrid/TextFloatingFilter';
+export * from './components/aggrid/defaults';
 export * from './components/aggrid/FilterHeader';
 export * from './components/UserAutocompleteSelect';
 export * from './ui/alert-dialog.js';
@@ -24,7 +24,6 @@ export * from './ui/table.js';
 export * from './ui/tabs.js';
 export * from './ui/textarea.js';
 export * from './ui/typography.js';
-export { LanguageProvider, useLanguage } from './language-provider.js';
 export { LanguageToggle } from './language-toggle.js';
 export { ThemeProvider, useTheme } from './theme-provider.js';
 export { ThemeToggle } from './theme-toggle.js';

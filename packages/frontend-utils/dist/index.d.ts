@@ -1,4 +1,3 @@
-export * from './aggrid.js';
 export * from './cn.js';
 export * from './date.js';
 export * from './hooks/useDebounce.js';
