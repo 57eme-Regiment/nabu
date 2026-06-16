@@ -1,7 +1,7 @@
 {
   "name": "@57eme-regiment/nabu-logger",
   "version": "0.1.0",
-  "description": "Shared tslog logger factory for 57\u00e8me R\u00e9giment services",
+  "description": "Shared tslog logger factory for 57eme Régiment services",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {

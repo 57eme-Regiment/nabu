@@ -10,9 +10,6 @@ importers:
 
   packages/errors:
     dependencies:
-      '@prisma/client':
-        specifier: '>=5'
-        version: 7.8.0(typescript@5.9.3)
       fastify:
         specifier: '>=4'
         version: 5.8.5
@@ -20,9 +17,12 @@ importers:
         specifier: '>=3'
         version: 4.4.3
     devDependencies:
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.19.21
       typescript:
-        specifier: ^5.6.0
-        version: 5.9.3
+        specifier: ^6.0.0
+        version: 6.0.3
 
   packages/fastify:
     dependencies:
@@ -36,15 +36,18 @@ importers:
         specifier: '>=3'
         version: 4.4.3
     devDependencies:
+      '@types/node':
+        specifier: ^22.0.0
+        version: 22.19.21
       typescript:
-        specifier: ^5.6.0
-        version: 5.9.3
+        specifier: ^6.0.0
+        version: 6.0.3
 
   packages/frontend-utils:
     dependencies:
       '@57eme-regiment/auth-contracts':
-        specifier: link:../../../../wan-shi-tong/packages/auth-contracts
-        version: link:../../../../wan-shi-tong/packages/auth-contracts
+        specifier: '>=1'
+        version: 1.11.0(@ts-rest/core@3.53.0-rc.1(@types/node@22.19.21))(zod@4.4.3)
       '@base-ui/react':
         specifier: '>=1.0.0-alpha'
         version: 1.5.0(@types/react@19.2.17)(date-fns@4.4.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -71,8 +74,8 @@ importers:
         specifier: 3.53.0-rc.1
         version: 3.53.0-rc.1(@types/node@22.19.21)
       typescript:
-        specifier: ^5.6.0
-        version: 5.9.3
+        specifier: ^6.0.0
+        version: 6.0.3
 
   packages/logger:
     dependencies:
@@ -84,14 +87,17 @@ importers:
         specifier: ^22.0.0
         version: 22.19.21
       typescript:
-        specifier: ^5.6.0
-        version: 5.9.3
+        specifier: ^6.0.0
+        version: 6.0.3
 
   packages/ui:
     dependencies:
       '@57eme-regiment/auth-contracts':
-        specifier: ^1.11.0
+        specifier: '>=1'
         version: 1.11.0(@ts-rest/core@3.53.0-rc.1(@types/node@22.19.21))(zod@4.4.3)
+      '@57eme-regiment/nabu-frontend-utils':
+        specifier: workspace:*
+        version: link:../frontend-utils
       '@base-ui/react':
         specifier: '>=1.0.0-alpha'
         version: 1.5.0(@types/react@19.2.17)(date-fns@4.4.0)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -130,8 +136,8 @@ importers:
         specifier: ^19.0.0
         version: 19.2.17
       typescript:
-        specifier: ^5.6.0
-        version: 5.9.3
+        specifier: ^6.0.0
+        version: 6.0.3
 
 packages:
 
@@ -218,21 +224,6 @@ packages:
 
   '@pinojs/redact@0.4.0':
     resolution: {integrity: sha512-k2ENnmBugE/rzQfEcdWHcCY+/FM3VLzH9cYEsbdsoqrvzAKRhUZeRNhAZvB8OitQJ1TBed3yqWtdjzS6wJKBwg==}
-
-  '@prisma/client-runtime-utils@7.8.0':
-    resolution: {integrity: sha512-5NQZztQ0oY/ADFkmd9gPuweH5A1/CCY8YQPorLLO0Mu6a87mY5gsnDkzmFmIHs9NFaLnZojzgddFVN4RpKYrdw==}
-
-  '@prisma/client@7.8.0':
-    resolution: {integrity: sha512-HFp3Dawv/3sU3JtlPha90IB+48lS7zHiH4LKZPjmcE8YH5P9DOXGPvo8dqOtO7MqLDd1p2hOWMcFlRT1DMblHw==}
-    engines: {node: ^20.19 || ^22.12 || >=24.0}
-    peerDependencies:
-      prisma: '*'
-      typescript: '>=5.4.0'
-    peerDependenciesMeta:
-      prisma:
-        optional: true
-      typescript:
-        optional: true
 
   '@tabler/icons-react@3.44.0':
     resolution: {integrity: sha512-8+rvzBbVm/1Z3sG3x7GUNAaxIKxwgz8xaMhRs23nrCnMTKRFAhEC+82zAIFeAA0seXdrAGX5HFCkaLpGK2rVHg==}
@@ -490,8 +481,8 @@ packages:
     resolution: {integrity: sha512-XuELoRpMR+sq8fuWwX7P0bcj+PRNiicOKDEb3fGNURhxWVyykCi9BNq7c4uVz7h7P0sj8qgBsr5SWS6yBClq3g==}
     engines: {node: '>=16'}
 
-  typescript@5.9.3:
-    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -603,14 +594,6 @@ snapshots:
   '@floating-ui/utils@0.2.11': {}
 
   '@pinojs/redact@0.4.0': {}
-
-  '@prisma/client-runtime-utils@7.8.0': {}
-
-  '@prisma/client@7.8.0(typescript@5.9.3)':
-    dependencies:
-      '@prisma/client-runtime-utils': 7.8.0
-    optionalDependencies:
-      typescript: 5.9.3
 
   '@tabler/icons-react@3.44.0(react@19.2.7)':
     dependencies:
@@ -850,7 +833,7 @@ snapshots:
 
   tslog@4.10.2: {}
 
-  typescript@5.9.3: {}
+  typescript@6.0.3: {}
 
   undici-types@6.21.0: {}
 

@@ -1,7 +1,7 @@
 {
   "name": "@57eme-regiment/nabu-errors",
   "version": "0.1.0",
-  "description": "Shared error handling for 57\u00e8me R\u00e9giment Fastify services",
+  "description": "Shared error handling for 57ème Régiment Fastify services",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -15,11 +15,11 @@
     "dev": "tsc --project tsconfig.json --watch"
   },
   "peerDependencies": {
-    "@prisma/client": ">=5",
     "fastify": ">=4",
     "zod": ">=3"
   },
   "devDependencies": {
+    "@types/node": "^22.0.0",
     "typescript": "^6.0.0"
   }
 }
