@@ -1,0 +1,1 @@
+{"version":3,"file":"language-toggle.d.ts","sourceRoot":"","sources":["../src/language-toggle.tsx"],"names":[],"mappings":"AAEA,KAAK,mBAAmB,GAAG;IACzB,QAAQ,EAAE,MAAM,CAAC;IACjB,SAAS,CAAC,EAAE,MAAM,EAAE,CAAC;IACrB,QAAQ,EAAE,CAAC,IAAI,EAAE,MAAM,KAAK,IAAI,CAAC;CAClC,CAAC;AAEF,wBAAgB,cAAc,CAAC,EAC7B,QAAQ,EACR,SAAwB,EACxB,QAAQ,GACT,EAAE,mBAAmB,2CAcrB"}
