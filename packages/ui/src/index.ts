@@ -1,6 +1,7 @@
 // Custom components
 export * from './components/aggrid/defaults';
 export * from './components/aggrid/FilterHeader';
+export * from './components/Breadcrumb';
 export * from './components/UserAutocompleteSelect';
 
 // Ui components (shad cn)

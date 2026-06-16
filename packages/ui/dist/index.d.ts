@@ -1,5 +1,6 @@
 export * from './components/aggrid/defaults';
 export * from './components/aggrid/FilterHeader';
+export * from './components/Breadcrumb';
 export * from './components/UserAutocompleteSelect';
 export * from './ui/alert-dialog.js';
 export * from './ui/avatar.js';
