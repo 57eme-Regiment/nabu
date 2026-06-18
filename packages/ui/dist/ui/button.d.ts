@@ -4,9 +4,9 @@ type ButtonProps = {
     loading?: boolean;
 };
 declare const buttonVariants: (props?: ({
-    variant?: "default" | "link" | "secondary" | "destructive" | "outline" | "ghost" | "outlineDestructive" | "outlineFilled" | null | undefined;
+    variant?: "link" | "default" | "outline" | "outlineDestructive" | "outlineFilled" | "secondary" | "ghost" | "destructive" | null | undefined;
     size?: "default" | "xs" | "sm" | "lg" | "icon" | "icon-xs" | "icon-sm" | "icon-lg" | null | undefined;
 } & import("class-variance-authority/types").ClassProp) | undefined) => string;
-declare function Button({ className, variant, size, loading, disabled, children, ...props }: ButtonPrimitive.Props & VariantProps<typeof buttonVariants> & ButtonProps): import("react/jsx-runtime").JSX.Element;
+declare function Button({ className, variant, size, loading, disabled, children, ...props }: ButtonPrimitive.Props & VariantProps<typeof buttonVariants> & ButtonProps): import("react").JSX.Element;
 export { Button, ButtonProps, buttonVariants };
 //# sourceMappingURL=button.d.ts.map

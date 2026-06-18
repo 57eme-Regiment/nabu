@@ -16,7 +16,7 @@ export type ContractEndpoint = {
   responses: Record<number, ZodType>;
   summary?: string;
   description?: string;
-  metadata?: { tags?: string[] };
+  metadata?: { tags?: string[]; permission?: string };
 };
 
 // ts-rest 3.x + Zod v4 : l'inférence de type perd path/responses comme propriétés
@@ -26,9 +26,26 @@ type AnyContractEndpoint = ContractEndpoint | (Record<string, any> & Pick<Contra
 
 type ZodServer = FastifyInstance<any, any, any, any, ZodTypeProvider>;
 
+export type PermissionChecker = (permission: string) => (req: FastifyRequest, reply: FastifyReply) => Promise<void>;
+
+let _permissionChecker: PermissionChecker | undefined;
+
+/**
+ * Configure le checker de permissions utilisé par `declareRoute`.
+ * À appeler une seule fois au démarrage de l'application.
+ *
+ * @example
+ * configurePermissionChecker(requirePermission);
+ */
+export function configurePermissionChecker(checker: PermissionChecker): void {
+  _permissionChecker = checker;
+}
+
 /**
  * Enregistre une route Fastify à partir d'un endpoint de contrat ts-rest.
  * Mappe automatiquement `method`, `path`, `body`, `pathParams` et `responses`.
+ * Si `contract.metadata.permission` est défini et qu'un checker a été configuré
+ * via `configurePermissionChecker`, un preHandler de permission est injecté automatiquement.
  *
  * @example
  * declareRoute(server, inventoryContract.getAll, ctrl.getAll.bind(ctrl));
@@ -49,6 +66,12 @@ export function declareRoute(
   if (contract.description) schema.description = contract.description;
   if (contract.metadata?.tags) schema.tags = contract.metadata.tags;
 
+  const permission = contract.metadata?.permission;
+  const resolvedOptions: Omit<RouteShorthandOptions, 'schema'> =
+    permission && _permissionChecker && !options?.preHandler
+      ? { preHandler: _permissionChecker(permission), ...options }
+      : { ...options };
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (server[method] as any)(contract.path, { ...options, schema }, handler);
+  (server[method] as any)(contract.path, { ...resolvedOptions, schema }, handler);
 }

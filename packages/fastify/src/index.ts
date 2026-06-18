@@ -1,2 +1,2 @@
-export { declareRoute, type ContractEndpoint } from './declare-route';
+export { declareRoute, configurePermissionChecker, type ContractEndpoint, type PermissionChecker } from './declare-route';
 export { HttpMethod, HttpMethodSchema, type HttpMethod as HttpMethodType } from './http-method';
