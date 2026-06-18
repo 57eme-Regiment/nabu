@@ -26,7 +26,8 @@ type AnyContractEndpoint = ContractEndpoint | (Record<string, any> & Pick<Contra
 
 type ZodServer = FastifyInstance<any, any, any, any, ZodTypeProvider>;
 
-export type PermissionChecker = (permission: string) => (req: FastifyRequest, reply: FastifyReply) => Promise<void>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type PermissionChecker = (permission: any) => (req: FastifyRequest, reply: FastifyReply) => Promise<void>;
 
 let _permissionChecker: PermissionChecker | undefined;
 

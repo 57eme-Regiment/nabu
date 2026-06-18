@@ -17,7 +17,7 @@ export type ContractEndpoint = {
 };
 type AnyContractEndpoint = ContractEndpoint | (Record<string, any> & Pick<ContractEndpoint, 'method'>);
 type ZodServer = FastifyInstance<any, any, any, any, ZodTypeProvider>;
-export type PermissionChecker = (permission: string) => (req: FastifyRequest, reply: FastifyReply) => Promise<void>;
+export type PermissionChecker = (permission: any) => (req: FastifyRequest, reply: FastifyReply) => Promise<void>;
 /**
  * Configure le checker de permissions utilisé par `declareRoute`.
  * À appeler une seule fois au démarrage de l'application.
