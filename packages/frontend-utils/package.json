@@ -15,7 +15,7 @@
     "dev": "tsc --project tsconfig.json --watch"
   },
   "peerDependencies": {
-    "@57eme-regiment/auth-contracts": ">=1",
+    "@57eme-regiment/auth-contracts": ">=1.13.2",
     "@tabler/icons-react": ">=3",
     "@tanstack/react-query": ">=5",
     "@tanstack/react-router": ">=1",
