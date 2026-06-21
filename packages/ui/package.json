@@ -15,7 +15,7 @@
     "dev": "tsc --project tsconfig.json --watch"
   },
   "peerDependencies": {
-    "@57eme-regiment/auth-package": ">=1",
+    "@57eme-regiment/auth-package": ">=2.0.0",
     "@tanstack/react-query": ">=5",
     "@tanstack/react-router": ">=1",
     "ag-grid-community": ">=35",

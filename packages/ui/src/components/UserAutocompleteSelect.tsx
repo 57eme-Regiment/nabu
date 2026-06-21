@@ -1,4 +1,4 @@
-import type { User } from '@57eme-regiment/auth-contracts';
+import type { User } from '@57eme-regiment/auth-package';
 import {
   cn,
   HttpError,
