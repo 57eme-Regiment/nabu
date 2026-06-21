@@ -1,4 +1,4 @@
-import { PermissionSchema } from '@57eme-regiment/auth-contracts';
+import { PermissionSchema } from '@57eme-regiment/auth-package';
 import type { TablerIcon } from '@tabler/icons-react';
 import type { LinkProps } from '@tanstack/react-router';
 import { z } from 'zod';

@@ -1,4 +1,4 @@
-import { PermissionSchema } from '@57eme-regiment/auth-contracts';
+import { PermissionSchema } from '@57eme-regiment/auth-package';
 import { z } from 'zod';
 export const NavigationLinkSchema = z.object({
     to: z.custom(),

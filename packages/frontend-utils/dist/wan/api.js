@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-import { adminContract, contract as nonAdminContract, } from '@57eme-regiment/auth-contracts';
+import { adminContract, contract as nonAdminContract, } from '@57eme-regiment/auth-package';
 import { initClient } from '@ts-rest/core';
 export const wanAdminUserApi = initClient(adminContract.adminUsers, {
     baseUrl: import.meta.env.VITE_WANSHITONG_SERVICE_URL,

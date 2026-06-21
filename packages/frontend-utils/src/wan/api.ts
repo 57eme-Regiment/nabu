@@ -2,7 +2,7 @@
 import {
   adminContract,
   contract as nonAdminContract,
-} from '@57eme-regiment/auth-contracts';
+} from '@57eme-regiment/auth-package';
 import { initClient } from '@ts-rest/core';
 
 export const wanAdminUserApi = initClient(adminContract.adminUsers, {
